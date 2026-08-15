@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RED SEA VOYAGE — Экскурсии в Хургаде</title>
+
+<meta name="description" content="Экскурсии в Хургаде: море, острова, сафари, Луксор, дайвинг и индивидуальные программы. Быстрое бронирование в WhatsApp.">
+
+<style>
+:root{
+--blue:#062f52;
+--deep:#031d32;
+--cyan:#00b7d6;
+--gold:#f5bd42;
+--green:#25D366;
+--bg:#f4f8fb;
+--white:#fff;
+--muted:#667887;
+--shadow:0 18px 55px rgba(6,43,68,.12);
+--radius:24px;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--bg);
+color:#102335;
+line-height:1.5;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button,input,select,textarea{
+font:inherit;
+}
+
+button{
+cursor:pointer;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(255,255,255,.94);
+backdrop-filter:blur(15px);
+border-bottom:1px solid #dce8ef;
+}
+
+.nav{
+height:74px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-weight:950;
+letter-spacing:1px;
+color:var(--blue);
+font-size:21px;
+line-height:1;
+}
+
+.logo span{
+color:var(--cyan);
+}
+
+.logo small{
+display:block;
+font-size:8px;
+letter-spacing:3px;
+color:var(--muted);
+margin-top:5px;
+}
+
+nav{
+display:flex;
+gap:25px;
+font-size:14px;
+font-weight:800;
+}
+
+nav a:hover{
+color:var(--cyan);
+}
+
+.menu{
+display:none;
+border:0;
+background:var(--blue);
+color:white;
+border-radius:12px;
+padding:10px 14px;
+}
+
+/* HERO */
+
+.hero{
+min-height:650px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,rgba(3,29,50,.94),rgba(6,59,102,.68),rgba(6,59,102,.15)),
+url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=2000&q=90")
+center/cover;
+}
+
+.hero-content{
+max-width:820px;
+}
+
+.badge{
+display:inline-block;
+background:rgba(255,255,255,.13);
+border:1px solid rgba(255,255,255,.35);
+color:white;
+border-radius:999px;
+padding:9px 15px;
+font-size:12px;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.hero h1{
+color:white;
+font-size:clamp(43px,7vw,78px);
+line-height:1.02;
+margin-bottom:22px;
+letter-spacing:-2px;
+}
+
+.hero h1 span{
+color:#8eeaff;
+}
+
+.hero p{
+color:#e9f8ff;
+font-size:20px;
+max-width:690px;
+margin-bottom:20px;
+}
+
+.mini{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin:18px 0 27px;
+}
+
+.mini span{
+background:rgba(255,255,255,.13);
+border:1px solid rgba(255,255,255,.28);
+padding:8px 12px;
+border-radius:999px;
+color:white;
+font-size:12px;
+font-weight:800;
+}
+
+/* BUTTONS */
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+border:0;
+border-radius:14px;
+padding:15px 21px;
+font-weight:900;
+font-size:14px;
+transition:.2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.primary{
+background:var(--gold);
+color:#172a3b;
+}
+
+.secondary{
+background:white;
+color:var(--blue);
+margin-left:8px;
+}
+
+/* TRUST */
+
+.trust{
+background:white;
+box-shadow:var(--shadow);
+border-radius:20px;
+padding:22px;
+margin-top:-45px;
+position:relative;
+z-index:5;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.trust div{
+text-align:center;
+}
+
+.trust b{
+display:block;
+font-size:21px;
+color:var(--blue);
+}
+
+.trust span{
+font-size:13px;
+color:var(--muted);
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 0;
+}
+
+.heading{
+text-align:center;
+max-width:720px;
+margin:0 auto 40px;
+}
+
+.heading h2{
+font-size:40px;
+line-height:1.1;
+margin-bottom:12px;
+color:var(--blue);
+}
+
+.heading p{
+color:var(--muted);
+}
+
+.eyebrow{
+font-size:11px;
+letter-spacing:3px;
+font-weight:900;
+color:var(--cyan);
+margin-bottom:9px;
+}
+
+/* FILTER */
+
+.filters{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:30px;
+}
+
+.filter{
+border:1px solid #d7e4ec;
+background:white;
+color:var(--blue);
+padding:10px 17px;
+border-radius:999px;
+font-weight:800;
+}
+
+.filter.active{
+background:var(--blue);
+color:white;
+}
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.card{
+background:white;
+border-radius:var(--radius);
+overflow:hidden;
+box-shadow:var(--shadow);
+border:1px solid #e2edf3;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.photo{
+height:220px;
+background:center/cover;
+}
+
+.cardbody{
+padding:20px;
+}
+
+.tag{
+font-size:11px;
+font-weight:950;
+letter-spacing:1px;
+color:var(--cyan);
+}
+
+.card h3{
+margin:7px 0;
+font-size:23px;
+color:var(--blue);
+}
+
+.meta{
+color:var(--muted);
+font-size:13px;
+}
+
+.price{
+font-size:26px;
+font-weight:950;
+margin:16px 0;
+color:var(--blue);
+}
+
+.price small{
+font-size:11px;
+color:var(--muted);
+}
+
+.features{
+list-style:none;
+margin:12px 0 20px;
+color:#405361;
+font-size:14px;
+}
+
+.features li{
+margin:7px 0;
+}
+
+.features li:before{
+content:"✓";
+color:#00a36c;
+font-weight:950;
+margin-right:8px;
+}
+
+.actions{
+display:grid;
+grid-template-columns:1fr 1.25fr;
+gap:8px;
+}
+
+.actions .btn{
+width:100%;
+padding:13px 9px;
+font-size:12px;
+}
+
+.outline{
+background:#edf6fa;
+color:var(--blue);
+}
+
+/* WHY */
+
+.why{
+background:#eaf6fb;
+}
+
+.whygrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.whybox{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 30px rgba(6,43,68,.06);
+}
+
+.icon{
+font-size:31px;
+}
+
+.whybox h3{
+margin:10px 0 6px;
+color:var(--blue);
+}
+
+.whybox p{
+font-size:14px;
+color:var(--muted);
+}
+
+/* BOOKING */
+
+.booking{
+background:linear-gradient(135deg,var(--blue),#087eaa);
+color:white;
+}
+
+.booking .heading h2,
+.booking .heading p{
+color:white;
+}
+
+.booking .eyebrow{
+color:#8eeaff;
+}
+
+.form{
+background:white;
+border-radius:24px;
+padding:25px;
+max-width:720px;
+margin:auto;
+box-shadow:0 25px 80px rgba(0,0,0,.18);
+}
+
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:15px;
+border:1px solid #d5e1e8;
+border-radius:12px;
+font-size:15px;
+margin-bottom:12px;
+outline:none;
+background:white;
+}
+
+textarea{
+height:100px;
+resize:vertical;
+}
+
+.form .btn{
+width:100%;
+}
+
+/* FAQ */
+
+.faq{
+max-width:820px;
+margin:auto;
+}
+
+.faq details{
+background:white;
+margin:11px 0;
+padding:19px 21px;
+border-radius:15px;
+box-shadow:0 7px 25px rgba(9,47,69,.07);
+}
+
+.faq summary{
+font-weight:900;
+color:var(--blue);
+cursor:pointer;
+}
+
+.faq p{
+color:var(--muted);
+margin-top:12px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:100;
+background:var(--green);
+color:white;
+border-radius:999px;
+padding:15px 21px;
+font-weight:950;
+box-shadow:0 14px 35px rgba(0,0,0,.25);
+}
+
+.whatsapp:hover{
+transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+footer{
+background:var(--deep);
+color:#dcecf4;
+padding:38px 0;
+text-align:center;
+}
+
+footer strong{
+font-size:19px;
+letter-spacing:1px;
+}
+
+footer small{
+display:block;
+margin-top:8px;
+color:#91a9b8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+nav{
+display:none;
+position:absolute;
+top:74px;
+left:4%;
+right:4%;
+background:white;
+border-radius:16px;
+padding:15px;
+flex-direction:column;
+box-shadow:var(--shadow);
+}
+
+.menu{
+display:block;
+}
+
+.hero{
+min-height:620px;
+}
+
+.trust{
+grid-template-columns:repeat(2,1fr);
+}
+
+.grid{
+grid-template-columns:1fr 1fr;
+}
+
+.whygrid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:650px){
+
+section{
+padding:62px 0;
+}
+
+.hero{
+min-height:650px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.secondary{
+margin:8px 0 0;
+}
+
+.trust{
+grid-template-columns:1fr 1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.whygrid{
+grid-template-columns:1fr;
+}
+
+.heading h2{
+font-size:31px;
+}
+
+.row{
+grid-template-columns:1fr;
+}
+
+.whatsapp{
+left:14px;
+right:14px;
+text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a class="logo" href="#">
+RED SEA <span>VOYAGE</span>
+<small>HURGHADA</small>
+</a>
+
+<nav id="nav">
+<a href="#tours">Экскурсии</a>
+<a href="#why">Почему мы</a>
+<a href="#booking">Бронирование</a>
+<a href="#faq">FAQ</a>
+</nav>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="badge">
+🇪🇬 ХУРГАДА • КРАСНОЕ МОРЕ
+</div>
+
+<h1>
+Не просто экскурсия.<br>
+<span>Ваши лучшие воспоминания.</span>
+</h1>
+
+<p>
+Море, острова, пустыня и древний Египет —
+выбирайте впечатления, а мы позаботимся об остальном.
+</p>
+
+<div class="mini">
+<span>⭐ 4.9/5</span>
+<span>🚐 Трансфер</span>
+<span>🇷🇺 Русский</span>
+<span>⚡ Быстрое бронирование</span>
+</div>
+
+<a class="btn primary" href="#tours">
+СМОТРЕТЬ ЭКСКУРСИИ
+</a>
+
+<a class="btn secondary" href="#booking">
+ЗАБРОНИРОВАТЬ
+</a>
+
+</div>
+</section>
+
+<div class="container trust">
+
+<div>
+<b>⚡ Быстро</b>
+<span>Ответим в WhatsApp</span>
+</div>
+
+<div>
+<b>🚐 Трансфер</b>
+<span>Заберём из отеля</span>
+</div>
+
+<div>
+<b>🇷🇺 Русский</b>
+<span>Удобное общение</span>
+</div>
+
+<div>
+<b>💎 Честно</b>
+<span>Понятные цены</span>
+</div>
+
+</div>
+
+<section id="tours">
+
+<div class="container">
+
+<div class="heading">
+<div class="eyebrow">НАШИ ХИТЫ</div>
+
+<h2>Выберите своё приключение</h2>
+
+<p>
+Популярные экскурсии в Хургаде.
+Актуальная стоимость подтверждается перед бронированием.
+</p>
+</div>
+
+<div class="filters">
+
+<button class="filter active" onclick="filterTours('all',this)">
+Все
+</button>
+
+<button class="filter" onclick="filterTours('sea',this)">
+🌊 Море
+</button>
+
+<button class="filter" onclick="filterTours('desert',this)">
+🏜️ Сафари
+</button>
+
+<button class="filter" onclick="filterTours('history',this)">
+🏛️ История
+</button>
+
+</div>
+
+<div class="grid" id="tourGrid"></div>
+
+</div>
+</section>
+
+<section class="why" id="why">
+
+<div class="container">
+
+<div class="heading">
+
+<div class="eyebrow">
+БЕЗ ЛИШНИХ ХЛОПОТ
+</div>
+
+<h2>
+Почему RED SEA VOYAGE?
+</h2>
+
+<p>
+Выбрали тур → написали нам → получили подтверждение.
+</p>
+
+</div>
+
+<div class="whygrid">
+
+<div class="whybox">
+<div class="icon">💬</div>
+<h3>Быстрое бронирование</h3>
+<p>Оставьте заявку — менеджер уточнит детали в WhatsApp.</p>
+</div>
+
+<div class="whybox">
+<div class="icon">🚐</div>
+<h3>Трансфер из отеля</h3>
+<p>Для большинства программ доступен трансфер.</p>
+</div>
+
+<div class="whybox">
+<div class="icon">🇷🇺</div>
+<h3>Русскоязычная поддержка</h3>
+<p>Общайтесь на русском языке без лишних сложностей.</p>
+</div>
+
+<div class="whybox">
+<div class="icon">✨</div>
+<h3>Впечатления без стресса</h3>
+<p>Поможем выбрать программу по бюджету и времени.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="booking" id="booking">
+
+<div class="container">
+
+<div class="heading">
+
+<div class="eyebrow">БРОНИРОВАНИЕ</div>
+
+<h2>Забронировать за 1 минуту</h2>
+
+<p>
+Заполните несколько полей — заявка откроется в WhatsApp.
+</p>
+
+</div>
+
+<div class="form">
+
+<select id="tour">
+<option value="">Выберите экскурсию</option>
+</select>
+
+<div class="row">
+
+<input id="date" type="date">
+
+<input
+id="people"
+type="number"
+min="1"
+placeholder="Количество человек"
+>
+
+</div>
+
+<input
+id="hotel"
+placeholder="Название отеля"
+>
+
+<textarea
+id="note"
+placeholder="Дополнительно: дети, пожелания и т.д."
+></textarea>
+
+<button class="btn primary" onclick="book()">
+💬 ОТПРАВИТЬ ЗАЯВКУ В WHATSAPP
+</button>
+
+<p style="text-align:center;color:#71818d;font-size:11px;margin-top:10px;">
+Цена, трансфер и программа подтверждаются менеджером перед оплатой.
+</p>
+
+</div>
+</div>
+</section>
+
+<section id="faq">
+
+<div class="container">
+
+<div class="heading">
+
+<div class="eyebrow">FAQ</div>
+
+<h2>Частые вопросы</h2>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Как забронировать экскурсию?</summary>
+<p>
+Выберите тур, дату и количество человек, укажите отель и отправьте заявку в WhatsApp.
+</p>
+</details>
+
+<details>
+<summary>Нужно ли платить заранее?</summary>
+<p>
+Условия оплаты зависят от конкретной экскурсии. Уточните их при бронировании.
+</p>
+</details>
+
+<details>
+<summary>Есть ли трансфер из отеля?</summary>
+<p>
+Для многих экскурсий трансфер доступен. Время зависит от района отеля.
+</p>
+</details>
+
+<details>
+<summary>Можно ли заказать индивидуальную экскурсию?</summary>
+<p>
+Да. Напишите нам в WhatsApp, и мы поможем подобрать программу.
+</p>
+</details>
+
+<details>
+<summary>Можно ли заказать экскурсию сегодня?</summary>
+<p>
+Иногда да. Напишите нам как можно раньше, чтобы проверить доступность.
+</p>
+</details>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<a
+class="whatsapp"
+href="https://wa.me/971581594344?text=Здравствуйте!%20Хочу%20забронировать%20экскурсию%20в%20Хургаде."
+target="_blank"
+>
+💬 WhatsApp • БРОНИРОВАТЬ
+</a>
+
+<footer>
+
+<div class="container">
+
+<strong>RED SEA VOYAGE</strong>
+
+<br>
+
+Экскурсии в Хургаде • Красное море
+
+<small>
+Бронирование: +971 58 159 4344
+</small>
+
+</div>
+
+</footer>
+
+<script>
+
+const WHATSAPP_NUMBER = "971581594344";
+
+const tours = [
+
+{
+name:"Оранж Бэй",
+cat:"sea",
+price:"от $18",
+time:"≈ 8 часов",
+img:"https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Трансфер из отеля",
+"Снорклинг",
+"Отдых на острове",
+"Морская прогулка"
+]
+},
+
+{
+name:"Paradise Island",
+cat:"sea",
+price:"от $18",
+time:"≈ 8 часов",
+img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Красивый пляж",
+"Снорклинг",
+"Морская прогулка",
+"Отдых у моря"
+]
+},
+
+{
+name:"Sea Trip 5 в 1",
+cat:"sea",
+price:"от $20",
+time:"≈ 8 часов",
+img:"https://images.unsplash.com/photo-1544550285-f813152fb2fd?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Снорклинг",
+"Водные развлечения",
+"Обед и напитки",
+"Морская прогулка"
+]
+},
+
+{
+name:"Сафари в пустыне",
+cat:"desert",
+price:"от $30",
+time:"Полный день",
+img:"https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Квадроциклы",
+"Деревня бедуинов",
+"Катание на верблюдах",
+"Закат в пустыне"
+]
+},
+
+{
+name:"Луксор",
+cat:"history",
+price:"от $45",
+time:"≈ 14–16 часов",
+img:"https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Долина царей",
+"Храмы",
+"Колоссы Мемнона",
+"Русскоязычный гид"
+]
+},
+
+{
+name:"Дайвинг",
+cat:"sea",
+price:"от $20",
+time:"≈ 8 часов",
+img:"https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Погружения",
+"Снаряжение",
+"Инструктор",
+"Снорклинг"
+]
+},
+
+{
+name:"Эль-Гуна",
+cat:"sea",
+price:"от $36",
+time:"≈ 8 часов",
+img:"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Прогулка",
+"Лагуны",
+"Морская программа",
+"Отдых"
+]
+},
+
+{
+name:"Гранд Аквариум",
+cat:"history",
+price:"по запросу",
+time:"≈ 2–3 часа",
+img:"https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1000&q=85",
+features:[
+"Большие аквариумы",
+"Морские животные",
+"Семейный отдых",
+"Подходит детям"
+]
+}
+
+];
+
+let current="all";
+
+function renderTours(){
+
+const grid=document.getElementById("tourGrid");
+const select=document.getElementById("tour");
+
+grid.innerHTML="";
+
+select.innerHTML=
+'<option value="">Выберите экскурсию</option>';
+
+const filtered=tours.filter(t=>{
+return current==="all" || t.cat===current;
+});
+
+filtered.forEach(t=>{
+
+const category=
+t.cat==="sea"?"МОРЕ":
+t.cat==="desert"?"САФАРИ":"ИСТОРИЯ";
+
+const card=document.createElement("article");
+
+card.className="card";
+
+card.innerHTML=`
+
+<div class="photo"
+style="background-image:url('${t.img}')">
+</div>
+
+<div class="cardbody">
+
+<div class="tag">${category}</div>
+
+<h3>${t.name}</h3>
+
+<div class="meta">⏱ ${t.time}</div>
+
+<div class="price">
+${t.price}
+<small>за человека*</small>
+</div>
+
+<ul class="features">
+
+${t.features.map(f=>`
+<li>${f}</li>
+`).join("")}
+
+</ul>
+
+<div class="actions">
+
+<button
+class="btn outline"
+onclick="quickWhatsApp('${t.name}')">
+WHATSAPP
+</button>
+
+<button
+class="btn primary"
+onclick="selectTour('${t.name}')">
+ЗАБРОНИРОВАТЬ
+</button>
+
+</div>
+
+</div>
+`;
+
+grid.appendChild(card);
+
+});
+
+tours.forEach(t=>{
+
+const option=document.createElement("option");
+
+option.value=t.name;
+option.textContent=t.name;
+
+select.appendChild(option);
+
+});
+
+}
+
+function filterTours(category,button){
+
+current=category;
+
+document.querySelectorAll(".filter").forEach(b=>{
+b.classList.remove("active");
+});
+
+button.classList.add("active");
+
+renderTours();
+
+}
+
+function selectTour(name){
+
+document.getElementById("tour").value=name;
+
+document.getElementById("booking").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+function quickWhatsApp(name){
+
+const message=
+`Здравствуйте! 👋
+
+Хочу забронировать экскурсию:
+
+🏝 Экскурсия: ${name}
+
+Подскажите, пожалуйста, доступные даты и цену.
+
+RED SEA VOYAGE 🇪🇬`;
+
+const url=
+"https://wa.me/"+
+WHATSAPP_NUMBER+
+"?text="+
+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+function book(){
+
+const tour=document.getElementById("tour").value;
+const date=document.getElementById("date").value;
+const people=document.getElementById("people").value;
+const hotel=document.getElementById("hotel").value;
+const note=document.getElementById("note").value;
+
+if(!tour || !date || !people || !hotel){
+
+alert(
+"Пожалуйста, заполните экскурсию, дату, количество человек и отель."
+);
+
+return;
+
+}
+
+const message=
+
+`Здравствуйте! 👋
+
+Хочу забронировать экскурсию.
+
+🏝 Экскурсия: ${tour}
+📅 Дата: ${date}
+👥 Туристы: ${people}
+🏨 Отель: ${hotel}
+📝 Дополнительно: ${note || "нет"}
+
+RED SEA VOYAGE 🇪🇬`;
+
+const url=
+"https://wa.me/"+
+WHATSAPP_NUMBER+
+"?text="+
+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+function toggleMenu(){
+
+const nav=document.getElementById("nav");
+
+if(nav.style.display==="flex"){
+nav.style.display="";
+}else{
+nav.style.display="flex";
+}
+
+}
+
+const today=
+new Date().toISOString().split("T")[0];
+
+document.getElementById("date").min=today;
+
+renderTours();
+
+</script>
+
+</body>
+</html>
